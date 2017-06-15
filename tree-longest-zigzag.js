@@ -22,33 +22,33 @@ Tree.prototype.calc_longest_zigzag = function(T) {
 
 Tree.prototype.parse_tree = function(t, direction, path){
 
-  // If we can go left.
+  	// If we can go left.
 	if( t.l != null ){
 		var next_key = path + 'L';
 		var count = 0;
 
-    // If this is not the first node.
+    		// If this is not the first node.
 		if( typeof(this.paths[path]) !== 'undefined'){
       
-      // Get the previous zigzag count. We'll store it in the paths class var.
+      			// Get the previous zigzag count. We'll store it in the paths class var.
 			count = this.paths[path];
       
-      // If we switch directions
-      // it means we have a zigzag, so we increment count.
+		      	// If we switch directions
+		      	// it means we have a zigzag, so we increment count.
 			if ( direction == 'R' ){
 				count++;
 			}
-      // Remove the previous path.
+			// Remove the previous path.
 			delete this.paths[path];
 		}
     
-    // Set the new path key ( eg: LRRL + new_direction ) equal to the zigzag count.
+    		// Set the new path key ( eg: LRRL + new_direction ) equal to the zigzag count.
 		this.paths[ next_key ] = count;
-    // Move to next node recursively.
+    		// Move to next node recursively.
 		this.parse_tree(t.l, 'L', next_key);
 	}
 
-  // Same for oposite direction.
+  	// Same for oposite direction.
 	if( t.r != null ){
 		var count = 0;
 		var next_key = path + 'R';
