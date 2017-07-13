@@ -1,4 +1,5 @@
 # Helper JS Objects
+a collection of JS scripts
 
 ## Calculator
 
