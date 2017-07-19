@@ -1,6 +1,11 @@
 # Helper JS Objects
 a collection of JS scripts
 
+- [Bowling score calculator](#bowling-score-calculator)
+- [Poker highest hand](#poker-highest-hand)
+- [Calculator](#calculator)
+- [Tree longest zig zag](#tree-longest-zig-zag)
+
 ## Bowling score calculator
 
 A class that calculates the score of a bowling game.
