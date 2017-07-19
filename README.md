@@ -1,6 +1,27 @@
 # Helper JS Objects
 a collection of JS scripts
 
+## Bowling score calculator
+
+A class that calculates the score of a bowling game.
+
+``` JavaScript
+var bowling = new Bowling();
+bowling.calcScore( 'X' );
+bowling.calcScore( '0' );
+bowling.calcScore( '7' );
+bowling.calcScore( '1' );
+bowling.calcScore( '/' );
+```
+
+tests
+``` JavaScript
+bowlingScore('02 10 12 01 53 90 09 X 9/ XXX'); //103
+bowlingScore('11 11 11 11 11 11 11 11 11 11');
+bowlingScore('X X X X X X X X X XXX');
+bowlingScore('90 X 7/ 72 X 5/ 41 4/ 18 XXX');
+```
+
 ## Calculator
 
 A simple calculator for a given string. Parses string based on priority: first the parentheses, then * and /, then + and -.
