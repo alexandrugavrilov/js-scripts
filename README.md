@@ -22,6 +22,20 @@ bowlingScore('X X X X X X X X X XXX');
 bowlingScore('90 X 7/ 72 X 5/ 41 4/ 18 XXX');
 ```
 
+## Poker highest hand
+
+A class that calculates the highest poker hand
+
+``` JavaScript
+function assert(expected, player, opponent){
+	var p = new PokerHand(player);
+	var o = new PokerHand(opponent);
+	p.compareWith(o) == expected;
+}
+
+assert(Result.loss, "4S 5H 6H TS AC", "3S 5H 6H TS AC")
+```
+
 ## Calculator
 
 A simple calculator for a given string. Parses string based on priority: first the parentheses, then * and /, then + and -.
